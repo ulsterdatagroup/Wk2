@@ -1,1 +1,7 @@
 
+Practical 1 Part 2 8.3
+small correction to my own code cited by Tomi - as per my original to remove spaces:
+should be (" ",""), not (" "," ")
+myList = my_function(mySentence.upper().replace(" ",""))
+
+Stephanie 05/03/2019
