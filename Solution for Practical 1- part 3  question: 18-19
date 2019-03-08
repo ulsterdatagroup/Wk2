@@ -1,0 +1,25 @@
+#question 18 and 19
+# Function to get the sum of elements in the list
+def listsum(numList):
+    theSum = 0
+    for i in numList:
+        theSum = theSum + i
+    return theSum
+
+#Function to divide the list into the chunks and then callin listsum function to add the elements
+def sum_5 (num,n):
+    for i in range (0,len(num),n):
+        x=num[i:i+n]
+        
+        if(len(x)==n):
+            yield (listsum(x))
+     
+#Creating the list and calling the genrator method to get the sum 
+numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] 
+#n is number of elements in each batch
+n= 5
+a = (sum_5(numbers,n))
+for x in list(a):
+    print("Processing next batch....Sum is: " + str(x))
+     
+ 
